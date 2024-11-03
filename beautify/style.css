@@ -1,0 +1,654 @@
+/* Apply the default font for the entire body */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+/* Navbar styling */
+.nav {
+    background-color: white;
+    color: black; /* Change to white to make text visible */
+    padding: 20px 50px;
+}
+
+/* Use a different font for the navbar */
+.navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Merienda', cursive;
+}
+
+/* Topbanner styling */
+.TopBanner {
+    background-color: burlywood;
+    color: white; /* White text for better visibility */
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* Adjust font size as desired */
+    margin-bottom: 10px;
+    position: relative; /* Keeps it at the top */
+}
+
+.BannerItem{
+    display: flex;
+    align-items: center;
+    font-weight: bold; /* Makes the banner text stand out */
+}
+
+.BannerIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Small margin between text and icon */
+    display: inline-block;
+}
+
+/* Align the brand name and icon side-by-side */
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    left: 25%;
+    transform: translateX(-25%);
+}
+
+.brandIcon {
+    width: 70px;
+    height: 65px;
+    margin-right: 10px;
+    padding-top: 12px;
+}
+
+.brand h3 {
+    font-family: 'Merienda', cursive;
+    font-size: 1.8rem;
+}
+
+/* Styling for the search bar */
+.navItem {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+/* Container to hold the input and icon together */
+.searchContainer {
+    position: relative;
+    width: 400px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 8px 40px 8px 15px; /* Adds space for the icon on the right */
+    border-radius: 2px;
+    border: 2px solid #ccc;
+}
+
+/* Position the search icon inside the input field */
+.searchIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none; /* Allows click through the icon */
+}
+
+/* Align Account and Shopping Bag icons close to each other */
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 20px; /* Space between icons */
+    padding: 0px 5px;
+}
+
+.AccountIcon, .BagIcon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.iconContainer, h3 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Menubar styling */
+
+.navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    padding: 10px 0;
+    border: none; /* Remove any border */
+    box-shadow: none; /* Remove any shadow */
+    margin-bottom: 0; /* Remove any bottom margin */
+}
+
+.menuItem {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1rem;
+    color: black; /* Optional: Set text color if needed */
+}
+
+.banner_section {
+    width: 90%; /* Set width to occupy most of the page */
+    margin: 5px auto; /* Center section horizontally */
+    overflow: hidden;
+    background-image: url('../images/banner-bg.png'); /* Add background image */
+    background-size: cover; /* Cover entire section */
+    background-position: center; /* Center background image */
+    background-repeat: no-repeat;
+    height: 500px; /* Fixed height for the banner */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Slider container */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%; /* Ensures slides fill banner section */
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Banner Content */
+.banner_content {
+    position: absolute;
+    left: 10%;
+    color: #000;
+    text-align: left;
+    max-width: 40%;
+}
+
+/* Banner Title */
+.banner_title {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 10px;
+    font-family: 'Lato', serif;
+    color: #000;
+}
+
+.cursive {
+    font-family: "Mr Dafoe", cursive;
+    font-size: 2rem;
+}
+
+/* Banner Text */
+.banner_text {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: coral;
+    margin: 10px 0 20px;
+}
+
+/* "Buy Now" Button */
+.read_bt a {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #252525;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.read_bt a:hover {
+    background-color: #f5ddb6;
+}
+
+/* Banner Image */
+.banner_img {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
+
+.banner_img img {
+    width: 100%; /* Increase size as needed */
+    max-width: 100%;
+    height: auto;
+    transform: translateX(10%); /* Adjust position if needed */
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* features */
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.featureDesc {
+  color: gray;
+  font-family: "Lato", serif;
+  width: 50%;
+  height: 100px;
+}
+
+/*products*/
+
+/*footer*/
+
+footer {
+    display: flex;
+    font-family: "Bona Nova SC", serif;
+    background-color: burlywood;
+  }
+  
+  .footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .fMenuTitle {
+    font-size: 16px;
+    color: black;
+  }
+  
+  .fList {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .fListItem {
+    margin-bottom: 10px;
+    color: rgb(50, 4, 34);
+    cursor: pointer;
+  }
+  
+  .footerRight {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .fInput {
+    padding: 5px;
+    width: 50%;
+  }
+  
+  .fButton {
+    padding: 5px;
+    right: 10%;
+    background-color: white;
+    color:#000;
+  }
+  
+  .fIcons{
+    display: flex;
+  }
+  
+  .fIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .copyright{
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  /*gallery*/
+
+  .nsItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nsImg {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nsTitleSm {
+    font-size: 2.5rem; /* Adjust as needed */
+    margin: 0;
+}
+
+.nsTitleDesc {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.nsButton {
+    padding: 15px 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #ffffff; /* White background for contrast */
+    color: #000; /* Black text for contrast */
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nsButton:hover {
+    background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+/* products */
+
+.product-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 400px; /* Ensures all cards are the same height */
+}
+
+.product-image {
+    width: 100%;
+    height: 180px; /* Set a fixed height for images */
+    object-fit: contain; /* Ensures images are contained without cropping */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-name {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 10px 0;
+    min-height: 40px; /* Ensures uniform height for product names */
+    overflow: hidden; /* Truncates long text */
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.original-price {
+    text-decoration: line-through;
+    font-size: 1.1rem;
+    color: #999;
+    margin-left: 5px;
+}
+
+.discount {
+    font-size: 0.9rem;
+    color: #ff0000;
+    margin-left: 5px;
+}
+
+.product-shade {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 10px 0;
+    min-height: 20px; /* Ensures uniform height for the shade section */
+}
+
+.add-to-bag {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto; /* Pushes button to the bottom */
+}
+
+.add-to-bag:hover {
+    background-color: #333;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Brand logo and name */
+.brandlogin {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.BrandloginIcon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.brandlogin h3 {
+    font-family: 'Merienda', cursive;
+    font-size: 1.8rem;
+}
+
+/* Login container styling */
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.login-form h2 {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Form input styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+input[type="email"], input[type="password"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-button {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #555;
+}
+
+.forgot-password {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.or {
+    margin: 20px 0;
+    font-size: 1rem;
+    color: #888;
+}
+
+.social-login {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.facebook {
+    background-color: #4267B2;
+    color: white;
+    border: none;
+}
+
+.google {
+    background-color: #DB4437;
+    color: white;
+    border: none;
+}
+
+.signup {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.signup a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
